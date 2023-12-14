@@ -83,6 +83,10 @@ public class Teacher implements Comparable<Teacher> {
 //        System.out.println("Year of birth:"+year);
 //        System.out.println("State:"+state);
     }
+    public String printings()
+    {
+        return "ID:"+id+" First name:"+firstName+" Second name:"+secondName+" Salary:"+salary+" Year of birth:"+year+" State:"+state;
+    }
     @Override
     public int compareTo(Teacher t) {
         if(this.firstName.equals(t.firstName))
@@ -114,6 +118,7 @@ public class Teacher implements Comparable<Teacher> {
         t.setState(temp3);
         em.persist(t);
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        return;
     }
     static public void remove(Scanner scanner, EntityManager em)
     {
@@ -126,5 +131,7 @@ public class Teacher implements Comparable<Teacher> {
         }
         em.remove(t);
         System.out.println("Teacher removed");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        return;
     }
 }
