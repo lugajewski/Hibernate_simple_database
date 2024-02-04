@@ -4,15 +4,13 @@
              version="2.0">
 
     <persistence-unit name="mpu">
-        <description>
-            Persistence unit for the Jakarta Persistence tutorial of the Hibernate Getting Started Guide
-        </description>
+        
         <properties>
             <!-- Database connection settings -->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost/aoim_4" />
-            <property name="jakarta.persistence.jdbc.user" value="lukas" />
-            <property name="jakarta.persistence.jdbc.password" value="123" />
+            <property name="jakarta.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.password" value="" />
 
             <!-- Automatically export the schema -->
             <property name="jakarta.persistence.schema-generation.database.action" value="create" />
